@@ -4,8 +4,8 @@ export const system = createSystem(defaultConfig, {
   theme: {
     tokens: {
       fonts: {
-        heading: { value: "Ubuntu, sans-serif" },
-        body: { value: "Ubuntu, sans-serif" },
+        heading: { value: "Ubuntu" },
+        body: { value: "Ubuntu" },
       },
     },
   },
