@@ -16,10 +16,9 @@ const SideNav = () => {
         }
     ]
     return (
-        <Stack justify={"space-between"} boxShadow="sm" maxW="16rem" h="100vh">
+        <Stack justify={"space-between"} boxShadow="lg" w="14rem" h="100vh">
             <Box>
                 <Heading as="h1" textAlign="center" pt="2rem"> Vibe Coding </Heading>
-
                 <Box mx="3" mt="3">
                     {
                         sidelinks.map(nav => (
