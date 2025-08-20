@@ -2,8 +2,7 @@ import { RxDashboard } from "react-icons/rx";
 import { GrTransaction } from "react-icons/gr";
 import { BiSupport } from "react-icons/bi";
 import { Box, Heading, HStack, Icon, Stack, Text } from "@chakra-ui/react";
-const SideNav = ({ open }) => {
-    const show = open ? "flex" : "none";
+const SideNav = () => {
     const sidelinks = [
         {
             icon: RxDashboard,

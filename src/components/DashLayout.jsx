@@ -9,7 +9,7 @@ const DashLayout = ({title , children}) => {
   return (
     <Flex>
       <Box  display={{ base: "none", lg: "flex" }}>
-        <SideNav open={open} />
+        <SideNav />
       </Box>
 
       <SideDrawer open={open} setOpen={setOpen} />
