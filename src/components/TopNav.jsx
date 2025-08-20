@@ -1,10 +1,14 @@
 import { Box, Button, Flex, Heading, HStack, Icon, Menu, Portal } from "@chakra-ui/react"
 import { RiAccountCircleLine } from "react-icons/ri";
-const TopNav = () => {
+import { FaBars } from "react-icons/fa6";
+import SideDrawer from "./SideDrawer";
+const TopNav = ({title , setOpen}) => {
     return (
-    <Box>
-        <HStack  h="4rem" align="center" justify="space-between" maxW="80rem" px="32" mx="auto">
-            <Heading as="h2" >Dashboard</Heading>
+    <Box bg="yellow" >
+        
+        <HStack  h="4rem"  maxW="60rem" mx="auto" align="center" justify="space-between" >
+            <Icon as={FaBars}  display={{base:"flex" ,lg:"none"}} onClick={()=>{setOpen(true)}}/>
+            <Heading as="h2" >{title}</Heading>
             <Menu.Root>
                 <Menu.Trigger asChild>
                     <Box variant="unstyled" size="sm" transform="scale(1)" transition="transform 0.2s ease" _hover={{ transform: "scale(1.2)" }}>

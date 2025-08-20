@@ -2,7 +2,8 @@ import { RxDashboard } from "react-icons/rx";
 import { GrTransaction } from "react-icons/gr";
 import { BiSupport } from "react-icons/bi";
 import { Box, Heading, HStack, Icon, Stack, Text } from "@chakra-ui/react";
-const SideNav = () => {
+const SideNav = ({ open }) => {
+    const show = open ? "flex" : "none";
     const sidelinks = [
         {
             icon: RxDashboard,
@@ -16,7 +17,7 @@ const SideNav = () => {
         }
     ]
     return (
-        <Stack justify={"space-between"} boxShadow="lg" w="14rem" h="100vh">
+        <Stack justify={"space-between"} boxShadow={{base: "none",lg: "lg"}} w="14rem" h="100vh">
             <Box>
                 <Heading as="h1" textAlign="center" pt="2rem"> Vibe Coding </Heading>
                 <Box mx="3" mt="3">
