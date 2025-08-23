@@ -16,7 +16,7 @@ const SideNav = () => {
         }
     ]
     return (
-        <Stack justify={"space-between"} boxShadow={{base: "none",lg: "lg"}} w="14rem" h="100vh">
+        <Stack bg="white" justify={"space-between"} boxShadow={{base: "none",lg: "lg"}} w="14rem" h="100vh">
             <Box>
                 <Heading as="h1" textAlign="center" pt="2rem"> Vibe Coding </Heading>
                 <Box mx="3" mt="3">

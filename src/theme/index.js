@@ -9,4 +9,17 @@ export const system = createSystem(defaultConfig, {
       },
     },
   },
+  globalCss: {
+    "html, body": {
+      bg: "gray.50", // or whatever background color you prefer
+    },
+    "*::placeholder": {
+      opacity: 1,
+      color: "fg.subtle",
+    },
+    "*::selection": {
+      bg: "green.200",
+    },
+  },
+
 });

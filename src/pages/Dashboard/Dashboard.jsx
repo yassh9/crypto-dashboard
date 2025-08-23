@@ -1,10 +1,14 @@
-import { Container } from "@chakra-ui/react"
 import DashLayout from "../../components/DashLayout"
+import Portfolio from "./Components/Portfolio"
 const Dashboard = () => {
   return (
-    <DashLayout title = "Dashboard">
-      <div> Dashboard Content </div>
-    </DashLayout>
+    <>
+      <DashLayout title="Dashboard" >
+        <Portfolio />
+      </DashLayout>
+
+
+    </>
   )
 }
 
