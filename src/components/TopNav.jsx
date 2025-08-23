@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa6";
 import SideDrawer from "./SideDrawer";
 const TopNav = ({title , setOpen}) => {
     return (
-    <Box bg="yellow" >
+    <Box bg="white" >
         
         <HStack  h="4rem"  maxW="60rem" mx="auto" align="center" justify="space-between" >
             <Icon as={FaBars}  display={{base:"flex" ,lg:"none"}} onClick={()=>{setOpen(true)}}/>
