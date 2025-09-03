@@ -15,7 +15,7 @@ const DashLayout = ({ title, children }) => {
       <SideDrawer open={open} setOpen={setOpen} />
       <Box flexGrow={1} minH="100vh">
         <TopNav title={title} setOpen={setOpen} />
-        <Container bg="red.100" mt="6" maxW="60rem" mx="auto" px={0}>
+        <Container mt="6" maxW="60rem" mx="auto" px={0}>
           {children}
         </Container>
 

@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Heading, HStack, Icon, Menu, Portal } from "@chakra-ui/react"
 import { RiAccountCircleLine } from "react-icons/ri";
 import { FaBars } from "react-icons/fa6";
-import SideDrawer from "./SideDrawer";
 const TopNav = ({title , setOpen}) => {
     return (
     <Box bg="white" >
