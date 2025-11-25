@@ -10,13 +10,10 @@ const SideDrawer = ({open , setOpen}) => {
       <Portal>
         <Drawer.Backdrop />
         <Drawer.Positioner>
-          <Drawer.Content>
-            <Drawer.Body>
-             <SideNav />
+          <Drawer.Content maxW="14rem">
+            <Drawer.Body p={0}>
+             <SideNav onClose={() => setOpen(false)} isCollapsed={false} />
             </Drawer.Body>
-            <Drawer.CloseTrigger asChild>
-              <CloseButton size="sm" onClick={() => setOpen(false)} />
-            </Drawer.CloseTrigger>
           </Drawer.Content>
         </Drawer.Positioner>
       </Portal>

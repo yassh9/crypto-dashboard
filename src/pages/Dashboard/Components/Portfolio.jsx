@@ -12,13 +12,22 @@ const Portfolio = () => {
         Rupees: ((TotalValue * 25) / 100).toFixed(2),
     });
     return (
-        <HStack bg={{ base: "white", _dark: "gray.800" }} justify="space-between" p={6} borderRadius="xl" >
-            <Stack>
+        <Stack 
+            bg={{ base: "white", _dark: "gray.800" }} 
+            p={{ base: 4, md: 6 }} 
+            borderRadius="xl" 
+            direction={{ base: "column", md: "row" }}
+            justify={{ md: "space-between" }}
+            align={{ base: "stretch", md: "center" }}
+            spacing={{ base: 4, md: 0 }}
+        >
+            <Stack spacing={1}>
                 <Text
                     display="flex"
                     alignItems="center"
                     opacity={0.7}
-                    fontWeight="light">
+                    fontWeight="light"
+                    fontSize={{ base: "sm", md: "md" }}>
                     Total Portfolio Value
                     <FiInfo style={{ marginLeft: "0.5rem" }} />
                 </Text>
@@ -27,41 +36,60 @@ const Portfolio = () => {
                     textStyle="lg"
                     display="flex"
                     alignItems="center"
-                    fontWeight="bold">
+                    fontWeight="bold"
+                    fontSize={{ base: "xl", md: "2xl" }}>
                     <Icon as={FaRupeeSign} style={{ marginRight: "0.2rem" }} />
                     {TotalValue}
                 </Text>
             </Stack>
-            <Stack>
+            <Stack spacing={1}>
                 <Text
                     opacity={0.7}
-                    fontWeight="light">
+                    fontWeight="light"
+                    fontSize={{ base: "sm", md: "md" }}>
                     Wallet Balances
                 </Text>
-                <HStack>
+                <HStack flexWrap="wrap" spacing={{ base: 2, md: 3 }}>
                     <Text
                         fontWeight="bold"
-                        mr={2} display="flex"
-                        alignItems="center">
+                        display="flex"
+                        alignItems="center"
+                        fontSize={{ base: "sm", md: "md" }}>
                         <Icon as={BsCurrencyBitcoin} />
                         {WalletBalances.Bitcoin}
                     </Text>
                     <Text
                         fontWeight="bold"
-                        ml={2}
                         display="flex"
-                        alignItems="center">
+                        alignItems="center"
+                        fontSize={{ base: "sm", md: "md" }}>
                         <Icon as={FaRupeeSign} style={{ marginRight: "0.2rem" }} />{WalletBalances.Rupees}
                     </Text>
                 </HStack>
             </Stack>
-            <Box>
-                <Button bg="#5F00D9" colorScheme="purple" borderRadius="xl" m="2">
-                    <PiHandDepositFill style={{ marginRight: "0.2rem" }} /> Deposit</Button>
-                <Button bg="#5F00D9" colorScheme="purple" borderRadius="xl" mr="2">
-                    <PiHandWithdrawFill style={{ marginRight: "0.2rem" }} /> Withdraw</Button>
-            </Box>
-        </HStack>
+            <Stack direction={{ base: "row", md: "column" }} spacing={2} w={{ base: "full", md: "auto" }}>
+                <Button 
+                    bg="#5F00D9" 
+                    colorScheme="purple" 
+                    borderRadius="xl" 
+                    size={{ base: "sm", md: "md" }}
+                    flex={{ base: 1, md: 0 }}
+                    w={{ md: "auto" }}
+                >
+                    <PiHandDepositFill style={{ marginRight: "0.2rem" }} /> Deposit
+                </Button>
+                <Button 
+                    bg="#5F00D9" 
+                    colorScheme="purple" 
+                    borderRadius="xl"
+                    size={{ base: "sm", md: "md" }}
+                    flex={{ base: 1, md: 0 }}
+                    w={{ md: "auto" }}
+                >
+                    <PiHandWithdrawFill style={{ marginRight: "0.2rem" }} /> Withdraw
+                </Button>
+            </Stack>
+        </Stack>
     )
 }
 

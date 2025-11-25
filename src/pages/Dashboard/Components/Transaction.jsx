@@ -19,45 +19,61 @@ const transactions = [
     timestamp: "2022-06-09 7:06 PM",
   },
   {
-    id: "3",
+    id: "3",  
     icon: BsCurrencyRupee,
     text: "INR Deposit",
     amount: "+ ₹81,123.10",
     timestamp: "2022-06-09 7:06 PM",
   },
+  {
+    id: "4",  
+    icon: BsCurrencyRupee,
+    text: "INR Deposit",
+    amount: "+ ₹81,123.10",
+    timestamp: "2022-06-09 7:06 PM",
+  },
+  
 ];
 
 const Transaction = () => (
-  <Box bg={{ base: "white", _dark: "gray.800" }} mt={6} borderRadius="xl" p={6}>
-    <Text mb={6} fontSize="sm">
+  <Box 
+    bg={{ base: "white", _dark: "gray.800" }} 
+    borderRadius="xl" 
+    p={{ base: 4, md: 6 }} 
+    h="full"
+    display="flex"
+    flexDirection="column"
+  >
+    <Text mb={{ base: 3, md: 6 }} fontSize={{ base: "xs", md: "sm" }} fontWeight="medium" opacity={{ base: 0.8, md: 1 }}>
       Recent Transactions
     </Text>
-    <Stack spacing={4}>
+    <Stack spacing={{ base: 2.5, md: 4 }} flexGrow={1}>
       {transactions.map((transaction) => (
         <Fragment key={transaction.id}>
-          <Flex gap={4} align="center">
+          <Flex gap={{ base: 3, md: 4 }} align="center">
             <Grid
               placeItems="center"
               bg={{ base: "gray.100", _dark: "gray.700" }}
-              boxSize={10}
+              boxSize={{ base: 8, md: 10 }}
               borderRadius="full"
+              flexShrink={0}
             >
-              <Icon as={transaction.icon} boxSize={6} />
+              <Icon as={transaction.icon} boxSize={{ base: 4, md: 6 }} />
             </Grid>
-            <Flex justify="space-between" align="center" w="full">
-              <Stack spacing={0}>
-                <Text fontWeight="semibold">{transaction.text}</Text>
-                <Text fontSize="sm" color="gray.500">
+            <Flex justify="space-between" align="center" w="full" gap={{ base: 2, md: 0 }}>
+              <Stack spacing={0} flex={1}>
+                <Text fontWeight="semibold" fontSize={{ base: "sm", md: "md" }}>{transaction.text}</Text>
+                <Text fontSize={{ base: "xs", md: "sm" }} color="gray.500" display={{ base: "none", sm: "block" }}>
                   {transaction.timestamp}
                 </Text>
               </Stack>
-              <Text fontWeight="semibold">{transaction.amount}</Text>
+              <Text fontWeight="semibold" fontSize={{ base: "xs", md: "md" }} textAlign="right" flexShrink={0}>{transaction.amount}</Text>
             </Flex>
           </Flex>
         </Fragment>
       ))}
     </Stack>
-    <Button bg="#5F00D9" colorScheme="purple" w="full" mt={6}>
+    <Button bg="#5F00D9" colorScheme="purple" w="full" mt={{ base: 4, md: 6 }} size={{ base: "sm", md: "md" }}>
       View All
     </Button>
   </Box>

@@ -7,22 +7,24 @@ const InfoCard = ({ imgUrl, text, tagText, inverted }) => {
       bgImage={imgUrl}
       bgSize="cover"
       bgRepeat="no-repeat"
-      p={6}
+      p={{ base: 4, md: 6 }}
       borderRadius="xl"
-      mt={6}
     >
       <Tag.Root
         color={inverted ? "purple.500" : "white"}
         bg={inverted ? "white" : "purple.500"}
         borderRadius="full"
+        size={{ base: "sm", md: "md" }}
       >
         {tagText}
       </Tag.Root>
       <Text
-        mt="4"
+        mt={{ base: 3, md: 4 }}
         fontWeight="medium"
         textStyle="h5"
+        fontSize={{ base: "sm", md: "md" }}
         color={inverted ? "white" : { base: "gray.800", _dark: "gray.200" }}
+        lineHeight={{ base: "1.4", md: "1.6" }}
       >
         {text}
       </Text>
