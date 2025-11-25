@@ -3,9 +3,15 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { FaBars } from "react-icons/fa6";
 const TopNav = ({title , setOpen}) => {
     return (
-    <Box bg="white" >
+    <Box 
+        position="sticky" 
+        top={0} 
+        bg={{ base: "white", _dark: "gray.800" }} 
+        zIndex={5}
+        boxShadow="sm"
+    >
         
-        <HStack  h="4rem"  maxW="60rem" mx="auto" align="center" justify="space-between" >
+        <HStack  h="4rem"  maxW="60rem" mx="auto" align="center" justify="space-between" px={4}>
             <Icon as={FaBars}  display={{base:"flex" ,lg:"none"}} onClick={()=>{setOpen(true)}}/>
             <Heading as="h2" >{title}</Heading>
             <Menu.Root>

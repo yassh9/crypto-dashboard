@@ -12,7 +12,7 @@ const Portfolio = () => {
         Rupees: ((TotalValue * 25) / 100).toFixed(2),
     });
     return (
-        <HStack bg="white" justify="space-between" p={6} borderRadius="xl" >
+        <HStack bg={{ base: "white", _dark: "gray.800" }} justify="space-between" p={6} borderRadius="xl" >
             <Stack>
                 <Text
                     display="flex"
@@ -56,9 +56,9 @@ const Portfolio = () => {
                 </HStack>
             </Stack>
             <Box>
-                <Button bg="#5F00D9" borderRadius="xl" m="2">
+                <Button bg="#5F00D9" colorScheme="purple" borderRadius="xl" m="2">
                     <PiHandDepositFill style={{ marginRight: "0.2rem" }} /> Deposit</Button>
-                <Button bg="#5F00D9" borderRadius="xl" mr="2">
+                <Button bg="#5F00D9" colorScheme="purple" borderRadius="xl" mr="2">
                     <PiHandWithdrawFill style={{ marginRight: "0.2rem" }} /> Withdraw</Button>
             </Box>
         </HStack>
